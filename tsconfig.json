@@ -4,6 +4,7 @@
     "module": "ESNext",
     "lib": ["DOM", "ES2020"],
     "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
     "moduleResolution": "bundler",
     "strict": true,
     "esModuleInterop": true,
@@ -11,6 +12,12 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
+      "@app/*": ["src/app/*"],
+      "@pages/*": ["src/pages/*"],
+      "@widgets/*": ["src/widgets/*"],
+      "@features/*": ["src/features/*"],
+      "@entities/*": ["src/entities/*"],
+      "@shared/*": ["src/shared/*"],
       "@/*": ["src/*"]
     },
     "types": ["vite/client"]
