@@ -1,8 +1,8 @@
 # About
+Страница двухфакторной авторизации.
+
 Стек:
 React, TypeScript, Vite, Zustand, React Query, Tailwind, Ant-design, emotion
-
-Страница двухфакторной авторизации.
 
 # dev
 В корне проекта запустить.
