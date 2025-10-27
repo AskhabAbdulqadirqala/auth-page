@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import { AuthButton } from '@shared/ui/AuthButton';
+import { FormButton } from '@shared/ui/FormButton';
 import { useVerifyCode } from '../../lib/hooks/useVerifyCode';
 
 export const ContinueButton: FC = () => {
   const { verifyCode } = useVerifyCode();
 
-  return <AuthButton onClick={verifyCode}>Continue</AuthButton>;
+  return <FormButton onClick={verifyCode}>Continue</FormButton>;
 };

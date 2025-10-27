@@ -1,6 +1,4 @@
-import { FormEventHandler, ReactNode } from 'react';
-
-export interface AuthButtonProps {
+export interface FormButtonProps {
   /**
    * Флаг активности кнопки.
    * @default true
@@ -9,9 +7,9 @@ export interface AuthButtonProps {
   /**
    * Обработчик клика.
    */
-  onClick: FormEventHandler;
+  onClick: () => void;
   /**
    * Дочерние элементы.
    */
-  children: ReactNode;
+  children: React.ReactNode;
 }

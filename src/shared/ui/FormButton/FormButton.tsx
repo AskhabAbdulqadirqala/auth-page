@@ -1,12 +1,17 @@
-import { FC } from 'react';
+import { FC, FormEventHandler } from 'react';
 import { Button } from 'antd';
 
 import { cx } from '@shared/lib/cx';
 
-import { AuthButtonProps } from './AuthButton.props';
+import { FormButtonProps } from './FormButton.props';
 
-export const AuthButton: FC<AuthButtonProps> = (props) => {
+export const FormButton: FC<FormButtonProps> = (props) => {
   const { isActive = true, onClick, children } = props;
+
+  const handleClick: FormEventHandler = (e) => {
+    e.preventDefault();
+    onClick();
+  };
 
   return (
     <Button
@@ -17,7 +22,7 @@ export const AuthButton: FC<AuthButtonProps> = (props) => {
         '!h-[40px] !text-[16px]',
         !isActive ? 'bg-gray-400 text-white' : '',
       )}
-      onClick={onClick}
+      onClick={handleClick}
     >
       {children}
     </Button>
