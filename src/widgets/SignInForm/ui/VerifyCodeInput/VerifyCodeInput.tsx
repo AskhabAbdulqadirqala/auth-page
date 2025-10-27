@@ -15,13 +15,13 @@ const FormItem = styled(Form.Item)`
 
 export const VerifyCodeInput: FC = () => {
   const isLoading = useAuthStore((s) => s.isLoading);
-  const verifyCode = useAuthStore((s) => s.verifyCode);
+  const verificationCode = useAuthStore((s) => s.verificationCode);
   const isVerifyCodeFailed = useAuthStore((s) => s.isVerifyCodeFailed);
-  const setVerifyCode = useAuthStore((s) => s.setVerifyCode);
+  const setVerificationCode = useAuthStore((s) => s.setVerificationCode);
   const setVerifyCodeFailed = useAuthStore((s) => s.setVerifyCodeFailed);
 
   const handleChange = (val: string) => {
-    setVerifyCode(val);
+    setVerificationCode(val);
 
     if (val.length !== 6) {
       setVerifyCodeFailed(true);
@@ -33,7 +33,7 @@ export const VerifyCodeInput: FC = () => {
       <Input.OTP
         length={6}
         disabled={isLoading}
-        value={verifyCode}
+        value={verificationCode}
         onChange={handleChange}
         size='large'
         id='auth-code'

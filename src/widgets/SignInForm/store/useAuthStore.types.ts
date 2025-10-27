@@ -14,7 +14,7 @@ export type AuthState = {
   /**
    * Состояние поля кода подтверждения.
    */
-  verifyCode: string;
+  verificationCode: string;
   /**
    * Состояние загрузки.
    */
@@ -42,7 +42,7 @@ export type AuthState = {
   /**
    * Функция установки состояния поля кода подтверждения.
    */
-  setVerifyCode: (v: string) => void;
+  setVerificationCode: (v: string) => void;
   /**
    * Функция установки состояния загрузки.
    */

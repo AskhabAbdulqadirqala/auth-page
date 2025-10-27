@@ -15,7 +15,7 @@ import { ContinueButton } from './ui/ContinueButton';
 export const SignInForm = () => {
   const email = useAuthStore((s) => s.email);
   const password = useAuthStore((s) => s.password);
-  const verifyCode = useAuthStore((s) => s.verifyCode);
+  const verificationCode = useAuthStore((s) => s.verificationCode);
   const isLoading = useAuthStore((s) => s.isLoading);
   const isFirstStepCompleted = useAuthStore((s) => s.isFirstStepCompleted);
   const setIsFirstStepCompleted = useAuthStore(
@@ -41,7 +41,7 @@ export const SignInForm = () => {
     !isFirstStepCompleted ||
     (canGetNewCode && !isLoading && isFirstStepCompleted);
   const shouldShowContinueBtn =
-    isFirstStepCompleted && !canGetNewCode && verifyCode.length === 6;
+    isFirstStepCompleted && !canGetNewCode && verificationCode.length === 6;
   const formTitle = isFirstStepCompleted
     ? 'Two-Factor Authentication'
     : 'Sign in to your account to continue';

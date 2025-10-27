@@ -20,7 +20,7 @@ export const LoginButton: FC<LoginButtonProps> = (props) => {
     (s) => s.setIsFirstStepCompleted,
   );
   const setShouldValidate = useAuthStore((s) => s.setShouldValidate);
-  const setVerifyCode = useAuthStore((s) => s.setVerifyCode);
+  const setVerificationCode = useAuthStore((s) => s.setVerificationCode);
   const setVerifyCodeFailed = useAuthStore((s) => s.setVerifyCodeFailed);
 
   const loginMutation = useLoginMutation();
@@ -49,7 +49,7 @@ export const LoginButton: FC<LoginButtonProps> = (props) => {
     setShouldValidate(true);
 
     if (isFormValid) {
-      setVerifyCode('');
+      setVerificationCode('');
       setVerifyCodeFailed(false);
       mutateLogin();
     }
