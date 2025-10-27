@@ -3,11 +3,10 @@ import { FC, FormEventHandler } from 'react';
 import { AuthButton } from '@shared/ui/AuthButton';
 
 import { useAuthStore } from '../../store/useAuthStore';
+
 import { useLoginMutation } from '../../lib/hooks/useLoginMutation';
 
-interface LoginButtonProps {
-  isFormValid: boolean;
-}
+import { LoginButtonProps } from './LoginButton.props';
 
 export const LoginButton: FC<LoginButtonProps> = (props) => {
   const { isFormValid } = props;

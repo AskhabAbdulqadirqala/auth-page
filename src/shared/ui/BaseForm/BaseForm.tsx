@@ -1,17 +1,11 @@
-import { FC, FormEventHandler, ReactNode } from 'react';
+import { FC, FormEventHandler } from 'react';
 import { Form } from 'antd';
 import styled from '@emotion/styled';
 import { ArrowLeftOutlined } from '@ant-design/icons';
 
 import logo from './assets/logo.svg';
 
-interface BaseFormProps {
-  children: ReactNode;
-  title: string;
-  subtitle: string;
-  withBackBtn: boolean;
-  onBackButtonClick: () => void;
-}
+import { BaseFormProps } from './BaseForm.props';
 
 const Container = styled(Form)`
   width: 440px;

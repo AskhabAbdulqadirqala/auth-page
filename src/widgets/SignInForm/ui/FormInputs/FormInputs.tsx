@@ -2,13 +2,9 @@ import { FC } from 'react';
 import { Input } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
-import { ValidationErrors } from '../../lib/hooks/useFormValidate';
-
 import { useAuthStore } from '../../store/useAuthStore';
 
-interface FormInputsProps {
-  validationErrors: ValidationErrors;
-}
+import { FormInputsProps } from './FormInputs.props';
 
 export const FormInputs: FC<FormInputsProps> = (props) => {
   const { validationErrors } = props;

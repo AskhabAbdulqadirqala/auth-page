@@ -1,21 +1,15 @@
 import { useState, useEffect } from 'react';
 import { z } from 'zod';
 
+import {
+  UseFormValidateParams,
+  ValidationErrors,
+} from './useFormValidate.types';
+
 const formSchema = z.object({
   email: z.email('Invalid email address'),
   password: z.string().min(8, 'Password must be at least 8 characters'),
 });
-
-export type ValidationErrors = {
-  email?: string[];
-  password?: string[];
-};
-
-interface UseFormValidateParams {
-  email: string;
-  password: string;
-  shouldValidate: boolean;
-}
 
 export const useFormValidate = (params: UseFormValidateParams) => {
   const { email, password, shouldValidate } = params;

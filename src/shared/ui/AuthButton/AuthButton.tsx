@@ -1,13 +1,9 @@
-import { FC, FormEventHandler, ReactNode } from 'react';
+import { FC } from 'react';
 import { Button } from 'antd';
 
 import { cx } from '@shared/lib/cx';
 
-interface AuthButtonProps {
-  isActive?: boolean;
-  onClick: FormEventHandler;
-  children: ReactNode;
-}
+import { AuthButtonProps } from './AuthButton.props';
 
 export const AuthButton: FC<AuthButtonProps> = (props) => {
   const { isActive = true, onClick, children } = props;
